@@ -21,7 +21,8 @@ class TodoItemsController < ApplicationController
  
   # GET /todo_items/1/edit
   def edit
-  	@todo_list = TodoList.find(params[:todo_list_id])
+    @todo_list = TodoList.find(params[:todo_list_id])
+    @todo_item = TodoItem.find(params[:todo_item_id])
   end
  
   # POST /todo_items

@@ -9,6 +9,18 @@
 
 <p>
   <strong>Status:</strong>
+  <% if @todo_item.done %>      
+
+        <span class="done">
+                    <%= "Donezo!" %>
+        </span>
+        
+    <% else %>
+
+        <span class="not_done">
+                    <%= "Will do soon!" %>
+        </span>
+    <% end %>
 </p>
 
 <p>
@@ -16,5 +28,5 @@
   <%= @todo_item.description %>
 </p>
 
-<%= link_to 'Edit', edit_todo_list_todo_item_path(@todo_list, @todo_item) %> |
+<%= link_to 'Edit', edit_todo_list_todo_item_path(2,4) %> |
 <%= link_to 'Back', todo_list_path(@todo_list) %>
