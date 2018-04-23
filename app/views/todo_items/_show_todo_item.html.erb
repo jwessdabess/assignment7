@@ -1,0 +1,17 @@
+<!-- <h1>
+  <strong>Task title:</strong>
+  <%= @todo_item.task_title %>
+</h1> -->
+
+<p>
+  <strong>Due date:</strong>
+  <%= @todo_item.due_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo_item.description %>
+</p>
+
+<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
+<%= link_to 'Back', todo_items_path %>

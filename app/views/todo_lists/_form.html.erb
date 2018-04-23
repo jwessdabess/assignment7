@@ -1,0 +1,19 @@
+<%= form_with(model: todo_list, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :list_name %>
+    <%= form.text_field :list_name, id: :todo_list_list_name %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= form.label :list_due_date %>
+    <%= form.text_field :list_due_date, id: :todo_list_list_due_date %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <br>
+<% end %>

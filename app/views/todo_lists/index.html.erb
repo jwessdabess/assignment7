@@ -1,0 +1,18 @@
+<h1>Todo Lists</h1>
+
+<% @todo_lists.each do |todo_list| %>
+  <div class="todo_list">
+  <span class="todo_item_date_incomplete">
+  	<%= todo_list.list_due_date%>
+  </span>
+    <%= link_to "#{todo_list.list_name}", todo_list %>
+  </div>
+<% end %>
+
+<p />
+
+<%= will_paginate @todo_lists %>
+
+<br />
+"
+<%= link_to 'New Todo List', new_todo_list_path %>

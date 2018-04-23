@@ -1,0 +1,20 @@
+<h1>
+  <%= @todo_list.list_name %>
+</h1>
+
+<p>
+  <strong>List due date:</strong>
+  <%= @todo_list.list_due_date %>
+</p>
+
+<%= link_to 'Add Todo Item', new_todo_list_todo_item_path(@todo_list.id) %>|
+
+<div id="todo_items">
+	<%= render @todo_list.todo_items %>
+	<br>
+</div>
+
+<%= link_to 'Edit Todo List', edit_todo_list_path(@todo_list) %> |
+
+<%= link_to 'Back to Todo Lists', todo_lists_path %>
+
