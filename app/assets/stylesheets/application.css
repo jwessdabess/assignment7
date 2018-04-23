@@ -40,7 +40,7 @@
 	 border-radius: 25px;
 	 background: lightgray;
 	 padding: 10px;
-	 width: 200px;
+	 width: 250px;
 	 height: 20px;
 	 margin: 10px;
 	 border: 1px solid;
@@ -64,6 +64,13 @@
 	 height: 20px;
 	 margin: 10px;
 	 border: 1px solid;
+ }
+ .done {
+    border: solid #009933
+    
+ }
+ .not_done{
+    border: solid #cc0000;
  }
  
  

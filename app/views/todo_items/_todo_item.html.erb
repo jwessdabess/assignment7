@@ -1,5 +1,19 @@
 <div class="todo_item">
-    <div class="todo_item_title">
-        <%= link_to "#{todo_item.task_title}", todo_list_todo_item_path(@todo_list, @todo_item) %>
-    </div>
+    <% if todo_item.done %>      
+
+        <span class="done">
+                    <%= "#{todo_item.due_date}" %>
+        </span>
+        
+    <% else %>
+
+        <span class="not_done">
+                    <%= "#{todo_item.due_date}" %>
+        </span>
+    <% end %>
+    
+        <span class="todo_item_title">
+            <%= link_to "#{todo_item.task_title}", [@todo_list, todo_item] %>
+        </span>
+    
 </div>
